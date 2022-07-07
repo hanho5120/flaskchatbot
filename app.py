@@ -12,7 +12,7 @@ def index():
 @app.route('/chatbot',methods=('POST','GET'))
 def chatbot():
     req = request.get_json(force=True)
-
+    print('-----')
     print(req['queryResult']['intent']['displayname'])
 
     if req['queryResult']['intent']['displayname'] == 'pizzemenu':
